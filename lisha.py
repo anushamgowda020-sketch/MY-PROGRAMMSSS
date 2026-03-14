@@ -22,3 +22,37 @@ print("Error: Division error ")
 else:
 div_result=num3/num4
 print("The quotient of the division =",div_result)
+#day 5-pro 1
+L=[1,2,3,4,5,6,7,8,9,10]
+for n in range(1,11):
+    for i in L:
+        print(n,"x",i,"=",n*i) 
+#day 5 - pro 2 
+base=float(input("Enter the value of base:"))
+height=float(input("Enter the value of height:"))
+area=0.5*base*height
+print("The area of the triangle=",area)
+#day 5- pro 3
+n=int(input("Enter the value of n:"))
+n=str(n)
+nn=(n+n)
+nnn=(n+n+n)
+Sum=int(n)+int(nn)+int(nnn)
+print(Sum)
+#day 5 - pro 4
+n=int(input("Enter the value of n:"))
+n=str(n)
+nn=(n+n)
+nnn=(n+n+n)
+Sum=(n)+(nn)+(nnn)
+print(Sum)
+#day 5 - pro 5
+a=float(input("Enter the value of a:"))
+b=float(input("Enter the value of b:"))
+Sum=a+b
+Product=a*b
+if(Product<=1000):
+    print("The given product of numbers is lesser than 1000 and the product is",product)
+else:
+    print("The given product of numbers is greater than 1000 and the sum is",Sum)
+
