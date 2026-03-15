@@ -56,3 +56,20 @@ if(Product<=1000):
 else:
     print("The given product of numbers is greater than 1000 and the sum is",Sum)
 
+#day 6 - pro 1
+L=[1,2,3,4,5,6,7,8,9]
+odd=0
+even=0
+for i in L:
+    if(i%2==0):
+        even+=1
+    else:
+        odd+=1
+print("The number of even numbers are",even)
+print("The number of odd numbers are",odd)
+#day 6-pro 2
+input_str=input("Enter the value of a string in hyphen seperated way")
+input_lis=input_str.split('-')
+input_lis.sort()
+input_join='-'.join(input_lis)
+print(input_join)
