@@ -73,3 +73,49 @@ input_lis=input_str.split('-')
 input_lis.sort()
 input_join='-'.join(input_lis)
 print(input_join)
+#day 7 - pro 1
+w=input("Enter the sentence =")
+lc=0
+uc=0
+sp=0
+for i in w:
+    if i.isupper():
+        uc+=1
+    elif i.islower():
+        lc+=1
+    elif i.isspace():
+        sp+=1
+    else:
+        pass
+toggle_case=w.swapcase()
+print(lc)
+print(uc)
+print(sp)
+print(toggle_case)
+#day 7 - pro 2
+s={"Name":"Lisha","Age":18,"Gender":"Female"}
+print(s)
+s.update({"Age":19})
+print(s)
+s.update({"Status":"Single"})
+print(s)
+#day 7 - pro 3
+s={12,14,85,6,4,8,2,54,5,5}
+print("Original set:",s)
+item=int(input("Enter the value to be removed:"))
+if item in s:
+    s.remove(item)
+    print(s)
+else:
+    print("NOT FOUND")
+#day 7 - pro 4
+t=(1,2,5,4,5,6,9,8,5,6,3,2,1,7,9,5,1,2)
+print(t)
+repeated_items=[]
+for item in t:
+    if t.count(item)>1 and item not in repeated_items:
+        repeated_items.append(item)
+if repeated_items:
+    print(repeated_items)
+else:
+    print("NO REPEATED ITEMS")
