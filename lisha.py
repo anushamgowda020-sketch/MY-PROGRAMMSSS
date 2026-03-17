@@ -119,3 +119,50 @@ if repeated_items:
     print(repeated_items)
 else:
     print("NO REPEATED ITEMS")
+#day 8-pro 1    
+file_name='untitled.txt'
+count=0
+with open (file_name,"r") as file:
+    for l in file:
+        count+=1
+print(count) 
+#day 8 - pro 2
+fp=open('lis.txt','w')
+L=["They were happy\n"]
+fp.writelines(L)
+fp.close()
+fp=open('lis.txt','r')
+print(fp.readlines())
+fp.close()
+fp=open('lis.txt','a')
+P=["not good\n"]
+fp.writelines(P)
+fp.close()
+fp=open('lis.txt','r')
+print(fp.readlines())
+fp.close()
+#day 8 - pro 3
+import string 
+for letter in string.ascii_uppercase:
+    with open (letter+".txt","w") as f:
+        f.writelines("love lisha")
+#day 8 - pro 4
+def DivExp(a,b):
+    assert a>0,"Assertion failed: 'a' must be greater than zero"
+    if b==0:
+        raise ZeroDivisionError("Division by zero is not allowed")
+    c=a/b
+    return c 
+try:
+    a=int(input("Enter the value a "))
+    b=int(input("Enter the value of b"))
+    result= DivExp(a,b)
+    print(result)
+except AssertionError as e :
+    print("Error:",e)
+except ZeroDivisionError as e :
+    print("Error:",e)   
+except ValueError as e :
+    print("Error:Please enter the valid integer")
+
+
