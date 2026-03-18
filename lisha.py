@@ -164,5 +164,89 @@ except ZeroDivisionError as e :
     print("Error:",e)   
 except ValueError as e :
     print("Error:Please enter the valid integer")
+# day 9 - pro 1 
+import random
 
+number = random.randint(1, 100)
+attempts = 5
+
+for i in range(attempts):
+    guess = int(input("Enter your guess (1-100): "))
+
+    if guess == number:
+        print("Correct! You won 🎉")
+        break
+    elif guess > number:
+        print("Too high!")
+    else:
+
+        print("Too low!")
+
+    print("Attempts left:", attempts - i - 1)
+
+if guess != number:
+    print("You lost! The number was:", number)
+# day 9 - pro 2
+num = int(input("Enter a number: "))
+temp = num
+sum = 0
+
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** 3
+    temp //= 10
+
+if sum == num:
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")
+# day 9 - pro 3
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Cannot divide by zero"
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+op = input("Enter operation (+, -, *, /): ")
+
+if op == '+':
+    print(add(a, b))
+elif op == '-':
+    print(sub(a, b))
+elif op == '*':
+    print(mul(a, b))
+elif op == '/':
+    print(div(a, b))
+else:
+    print("Invalid operator")
+# day 9 - pro 4
+text = input("Enter a string: ")
+
+if text == text[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+ # day 9 - pro 5
+ marks = []
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    m = int(input(f"Enter marks of student {i+1}: "))
+    marks.append(m)
+
+print("Highest marks:", max(marks))
+print("Lowest marks:", min(marks))
+print("Average marks:", sum(marks)/len(marks))
 
