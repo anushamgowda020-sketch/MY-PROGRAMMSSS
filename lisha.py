@@ -249,4 +249,40 @@ for i in range(n):
 print("Highest marks:", max(marks))
 print("Lowest marks:", min(marks))
 print("Average marks:", sum(marks)/len(marks))
+#day 10 - pro 1
+s = input("Enter a string: ")
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+ #day 10 - pro 2
+ s = input("Enter a string: ").lower()
+vowels = "aeiou"
+v = c = 0
 
+for ch in s:
+    if ch.isalpha():
+        if ch in vowels:
+            v += 1
+        else:
+            c += 1
+
+print("Vowels:", v)
+print("Consonants:", c)
+ #day 10 - pro 3
+ nums = list(map(int, input("Enter numbers: ").split()))
+print("Largest:", max(nums))
+#day 10 - pro 4
+n = int(input("Enter n: "))
+a, b = 0, 1
+
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+#day 10 - pro 5
+pwd = input("Enter password: ")
+
+if len(pwd) >= 8 and any(c.isdigit() for c in pwd):
+    print("Strong Password")
+else:
+    print("Weak Password")
