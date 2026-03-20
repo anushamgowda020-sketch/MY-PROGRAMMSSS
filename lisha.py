@@ -286,3 +286,47 @@ if len(pwd) >= 8 and any(c.isdigit() for c in pwd):
     print("Strong Password")
 else:
     print("Weak Password")
+#day 11 - pro 1
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+#day 11 - pro 2
+nums = list(map(int, input("Enter numbers: ").split()))
+
+nums = list(set(nums))  # remove duplicates
+nums.sort()
+
+print("Second largest:", nums[-2])
+#day 11 - pro 3
+nums = list(map(int, input("Enter numbers: ").split()))
+unique = []
+
+for i in nums:
+    if i not in unique:
+        unique.append(i)
+
+print("Without duplicates:", unique)
+#day 11 - pro 4
+string = input("Enter string: ")
+freq = {}
+
+for ch in string:
+    freq[ch] = freq.get(ch, 0) + 1
+
+print(freq)
+#day 11 - pro 5
+num = int(input("Enter number: "))
+sum = 0
+
+for i in range(1, num):
+    if num % i == 0:
+        sum += i
+
+if sum == num:
+    print("Perfect number")
+else:
+    print("Not perfect")
