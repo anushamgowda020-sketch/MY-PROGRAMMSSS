@@ -330,3 +330,41 @@ if sum == num:
     print("Perfect number")
 else:
     print("Not perfect")
+#day 12- pro 1
+nums = list(map(int, input("Enter numbers: ").split()))
+
+unique_nums = list(set(nums))
+unique_nums.sort()
+
+print("Second largest:", unique_nums[-2])
+#day 12- pro 2
+s1 = input("Enter first string: ")
+s2 = input("Enter second string: ")
+
+if sorted(s1) == sorted(s2):
+    print("Anagrams")
+else:
+    print("Not Anagrams")
+#day 12- pro 3
+nums = list(map(int, input("Enter numbers: ").split()))
+freq = {}
+
+for num in nums:
+    freq[num] = freq.get(num, 0) + 1
+
+print(freq)
+#day 12- pro 4
+nums = list(map(int, input("Enter numbers: ").split()))
+n = len(nums) + 1
+
+total = n * (n + 1) // 2
+print("Missing number:", total - sum(nums))
+#day 12- pro 5
+s = input("Enter string: ")
+result = ""
+
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print("Without duplicates:", result)
