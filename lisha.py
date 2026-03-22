@@ -368,3 +368,32 @@ for ch in s:
         result += ch
 
 print("Without duplicates:", result)
+#day 13- pro 1
+str1 = input("Enter string: ")
+
+if str1 == str1[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+#day 13- pro 2
+f = float(input("Enter temperature in Fahrenheit: "))
+c = (5/9) * (f - 32)
+print("Celsius:", c)
+#day 13- pro 3
+lst = list(map(int, input("Enter list: ").split()))
+count = lst.count(2)
+print("2 appears", count, "times")
+#day 13- pro 4
+str1 = input("Enter string: ")
+char = input("Enter character to remove: ")
+
+result = str1.replace(char, "")
+print(result)
+#day 13- pro 5
+def long_words(words, k):
+    result = [word for word in words if len(word) > k]
+    return result
+
+words = input("Enter words: ").split()
+k = int(input("Enter length k: "))
+print(long_words(words, k))
