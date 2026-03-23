@@ -397,3 +397,19 @@ def long_words(words, k):
 words = input("Enter words: ").split()
 k = int(input("Enter length k: "))
 print(long_words(words, k))
+#day 14 - pro 1
+amount = float(input("Enter original amount: "))
+gst_rate = float(input("Enter GST rate (%): "))
+
+gst = (amount * gst_rate) / 100
+total = amount + gst
+
+print("GST Amount:", gst)
+print("Total Amount:", total)
+#day 14 - pro 2 
+year = int(input("Enter a year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
