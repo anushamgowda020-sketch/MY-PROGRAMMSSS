@@ -359,15 +359,7 @@ n = len(nums) + 1
 
 total = n * (n + 1) // 2
 print("Missing number:", total - sum(nums))
-#day 12- pro 5
-s = input("Enter string: ")
-result = ""
 
-for ch in s:
-    if ch not in result:
-        result += ch
-
-print("Without duplicates:", result)
 #day 13- pro 1
 str1 = input("Enter string: ")
 
@@ -389,14 +381,6 @@ char = input("Enter character to remove: ")
 
 result = str1.replace(char, "")
 print(result)
-#day 13- pro 5
-def long_words(words, k):
-    result = [word for word in words if len(word) > k]
-    return result
-
-words = input("Enter words: ").split()
-k = int(input("Enter length k: "))
-print(long_words(words, k))
 #day 14 - pro 1
 amount = float(input("Enter original amount: "))
 gst_rate = float(input("Enter GST rate (%): "))
@@ -413,3 +397,20 @@ if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
     print("Leap Year")
 else:
     print("Not a Leap Year")
+#day 15 - pro 1
+def long_words(words, k):
+    result = [word for word in words if len(word) > k]
+    return result
+
+words = input("Enter words: ").split()
+k = int(input("Enter length k: "))
+print(long_words(words, k))
+#day 15- pro 2
+s = input("Enter string: ")
+result = ""
+
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print("Without duplicates:", result)
