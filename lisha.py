@@ -414,3 +414,36 @@ for ch in s:
         result += ch
 
 print("Without duplicates:", result)
+#day 15 - pro 3
+n = 5
+
+# Upper part
+for i in range(1, n + 1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
+
+# Lower part
+for i in range(n, 0, -1):
+    print("*" * i + " " * (2 * (n - i)) + "*" * i)
+#day 15 - pro 4
+n = 9
+
+for i in range(3):
+    for j in range(n):
+        if ((i + j) % 4 == 0) or (i == 1 and j % 4 == 0):
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()
+ #day 15 - pro 5
+ arr = [10, 45, 23, 67, 67, 89, 34]
+
+first = second = float('-inf')
+
+for num in arr:
+    if num > first:
+        second = first
+        first = num
+    elif num > second and num != first:
+        second = num
+
+print("Second largest:", second)
