@@ -447,3 +447,58 @@ for num in arr:
         second = num
 
 print("Second largest:", second)
+#day 16 - pro 1
+def first_unique_char(s):
+    freq = {}
+
+    for char in s:
+        freq[char] = freq.get(char, 0) + 1
+
+    for char in s:
+        if freq[char] == 1:
+            return char
+
+    return None
+
+print(first_unique_char("aabbccdeff"))  
+#day 16 - pro 2
+def substrings(s):
+    result = []
+    for i in range(len(s)):
+        for j in range(i + 1, len(s) + 1):
+            result.append(s[i:j])
+    return result
+
+print(substrings("abc"))
+#day 16 - pro 3
+def is_rotation(s1, s2):
+    return len(s1) == len(s2) and s2 in (s1 + s1)
+
+print(is_rotation("abcd", "cdab"))  # True
+#day 16 - pro 4
+def missing_number(arr, n):
+    xor_all = 0
+    xor_arr = 0
+
+    for i in range(1, n + 1):
+        xor_all ^= i
+
+    for num in arr:
+        xor_arr ^= num
+
+    return xor_all ^ xor_arr
+
+print(missing_number([1, 2, 4, 5], 5))  # Output: 3
+#day 16- pro 5
+def flatten(lst):
+    result = []
+
+    for item in lst:
+        if isinstance(item, list):
+            result.extend(flatten(item))
+        else:
+            result.append(item)
+
+    return result
+
+print(flatten([1, [2, [3, 4], 5], 6]))
