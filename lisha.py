@@ -502,3 +502,80 @@ def flatten(lst):
     return result
 
 print(flatten([1, [2, [3, 4], 5], 6]))
+#day 17 - pro 1
+class BankAccount:
+    def __init__(self, name, balance=0):
+        self.name = name
+        self.balance = balance
+        self.transactions = []
+
+    def deposit(self, amount):
+        self.balance += amount
+        self.transactions.append(f"Deposited: {amount}")
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            self.transactions.append(f"Withdrew: {amount}")
+        else:
+            print("Insufficient Balance!")
+
+    def show_details(self):
+        print(f"Account Holder: {self.name}")
+        print(f"Balance: {self.balance}")
+        print("Transactions:")
+        for t in self.transactions:
+            print("-", t)
+
+
+# Object creation
+acc1 = BankAccount("Lish", 1000)
+
+acc1.deposit(500)
+acc1.withdraw(300)
+acc1.withdraw(1500)
+
+acc1.show_details()
+#day 17 - pro 2
+class Book:
+    def __init__(self, title):
+        self.title = title
+        self.available = True
+
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+
+    def issue_book(self, title):
+        for book in self.books:
+            if book.title == title and book.available:
+                book.available = False
+                print(f"{title} issued successfully!")
+                return
+        print(f"{title} not available!")
+
+    def return_book(self, title):
+        for book in self.books:
+            if book.title == title:
+                book.available = True
+                print(f"{title} returned!")
+                return
+
+
+# Objects
+lib = Library()
+
+b1 = Book("Python Basics")
+b2 = Book("Data Structures")
+
+lib.add_book(b1)
+lib.add_book(b2)
+
+lib.issue_book("Python Basics")
+lib.issue_book("Python Basics")  # tricky case
+lib.return_book("Python Basics")
+lib.issue_book("Python Basics")
