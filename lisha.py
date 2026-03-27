@@ -579,3 +579,39 @@ lib.issue_book("Python Basics")
 lib.issue_book("Python Basics")  # tricky case
 lib.return_book("Python Basics")
 lib.issue_book("Python Basics")
+#day 18- pro 1
+class Employee:
+    def __init__(self, name):
+        self.name = name
+
+    def calculate_salary(self):
+        pass  # to be overridden
+
+
+class FullTimeEmployee(Employee):
+    def __init__(self, name, salary):
+        super().__init__(name)
+        self.salary = salary
+
+    def calculate_salary(self):
+        return self.salary
+
+
+class PartTimeEmployee(Employee):
+    def __init__(self, name, hours, rate):
+        super().__init__(name)
+        self.hours = hours
+        self.rate = rate
+
+    def calculate_salary(self):
+        return self.hours * self.rate
+
+
+# Polymorphism in action
+employees = [
+    FullTimeEmployee("Lish", 50000),
+    PartTimeEmployee("Alex", 5, 500)
+]
+
+for emp in employees:
+    print(f"{emp.name}'s Salary:", emp.calculate_salary())
