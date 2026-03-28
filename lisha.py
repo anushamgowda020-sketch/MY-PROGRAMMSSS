@@ -615,3 +615,10 @@ employees = [
 
 for emp in employees:
     print(f"{emp.name}'s Salary:", emp.calculate_salary())
+#day 19 - pro 1
+print("hellooo people ")
+#day 19- pro 2 
+a=12
+b=4
+c=int(a+b)
+print(c)
