@@ -14,7 +14,7 @@ num1=float(input("Enter the first number for addtion:"))
 num2=float(input("Enter the second number for addtion:"))
 sum_result=num1+num2
 print(f"Sum:{num1}+{num2}={sum_result})
-#day 4 - pro 3
+#day 4 - pro 1
 num3=float(input("Enter the first number for division:"))
 num4=float(input("Enter the second number for division:"))
 if num4==0:
@@ -146,24 +146,6 @@ import string
 for letter in string.ascii_uppercase:
     with open (letter+".txt","w") as f:
         f.writelines("love lisha")
-#day 8 - pro 4
-def DivExp(a,b):
-    assert a>0,"Assertion failed: 'a' must be greater than zero"
-    if b==0:
-        raise ZeroDivisionError("Division by zero is not allowed")
-    c=a/b
-    return c 
-try:
-    a=int(input("Enter the value a "))
-    b=int(input("Enter the value of b"))
-    result= DivExp(a,b)
-    print(result)
-except AssertionError as e :
-    print("Error:",e)
-except ZeroDivisionError as e :
-    print("Error:",e)   
-except ValueError as e :
-    print("Error:Please enter the valid integer")
 # day 9 - pro 1 
 import random
 
@@ -622,3 +604,22 @@ a=12
 b=4
 c=int(a+b)
 print(c)
+#day 20 - pro 1
+#day 8 - pro 4
+def DivExp(a,b):
+    assert a>0,"Assertion failed: 'a' must be greater than zero"
+    if b==0:
+        raise ZeroDivisionError("Division by zero is not allowed")
+    c=a/b
+    return c 
+try:
+    a=int(input("Enter the value a "))
+    b=int(input("Enter the value of b"))
+    result= DivExp(a,b)
+    print(result)
+except AssertionError as e :
+    print("Error:",e)
+except ZeroDivisionError as e :
+    print("Error:",e)   
+except ValueError as e :
+    print("Error:Please enter the valid integer")
