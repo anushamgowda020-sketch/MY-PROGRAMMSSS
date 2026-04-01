@@ -605,7 +605,6 @@ b=4
 c=int(a+b)
 print(c)
 #day 20 - pro 1
-#day 8 - pro 4
 def DivExp(a,b):
     assert a>0,"Assertion failed: 'a' must be greater than zero"
     if b==0:
@@ -623,3 +622,4 @@ except ZeroDivisionError as e :
     print("Error:",e)   
 except ValueError as e :
     print("Error:Please enter the valid integer")
+#day 21 - pro 1 
